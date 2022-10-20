@@ -1,0 +1,49 @@
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form {
+        flex: 1;
+        background-color: aliceblue;
+        padding: 20px 0 20px 0;
+        min-width: 400px;
+
+        .contact-field {
+            padding: 5px 0 5px 0;
+        }
+    }
+
+    .info {
+        background-color: aliceblue;
+        flex: 1;
+
+        >div {
+            padding: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        .personal {
+            .personal-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    width: 100px;
+                }
+
+                span {
+                    width: 150px;
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+    }
+}
