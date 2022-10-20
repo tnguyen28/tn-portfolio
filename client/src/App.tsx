@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { About, Banner, Experience } from "./components/index";
+import { About, Banner, Contact, Experience, Footer } from "./components/index";
 
 const App = () => {
   return (
@@ -8,6 +8,8 @@ const App = () => {
       <Banner />
       <About />
       <Experience />
+      <Contact />
+      <Footer />
     </div>
   );
 };

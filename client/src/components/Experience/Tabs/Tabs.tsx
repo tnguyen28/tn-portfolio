@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./tabs.scss";
 import { experienceData } from "./constants";
-import { ExperienceData } from "./types";
+import { ExperienceData, TechItem } from "./types";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(
@@ -18,10 +18,11 @@ const Tabs = () => {
       const id: string = `${companyName}_${title}`;
       return (
         <li
+          key={id}
           className={activeTab === id ? "active" : "not-active"}
           onClick={() => handleTab(id)}
         >
-          {companyName}
+          <p>{companyName}</p>
         </li>
       );
     });
@@ -29,21 +30,39 @@ const Tabs = () => {
 
   const renderTabContent = (data: ExperienceData[]) => {
     return data.map((company: ExperienceData) => {
-      const { companyName, title, dateRange, description } = company;
+      const { companyName, title, dateRange, description, tech } = company;
       const id: string = `${companyName}_${title}`;
-      return (
-        <>
-          {activeTab === id ? (
-            <div id={id}>
-              <p>
-                {title} @ {companyName}
-              </p>
-              <p>{dateRange}</p>
-              <p>{description}</p>
-            </div>
-          ) : null}
-        </>
-      );
+      return activeTab === id ? (
+        <div id={id} key={id}>
+          <div className="tab-item-title">
+            <p>{title}</p>
+            <p>{companyName}</p>
+          </div>
+          <div className="tab-item-date">
+            <p>{dateRange}</p>
+          </div>
+          <div className="tab-item-description">
+            <ul>
+              {description.map((desc) => {
+                return <li key={desc}>{desc}</li>;
+              })}
+            </ul>
+          </div>
+          <div className="tab-item-techstack">
+            <strong>Tech Stack</strong>
+            <ul>
+              {tech.map((item: TechItem) => (
+                <li key={item.name}>
+                  <div className='tech-item'>
+                    <div className='tech-img'></div>
+                    <p>{item.name}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : null;
     });
   };
 

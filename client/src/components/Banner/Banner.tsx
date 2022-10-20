@@ -5,15 +5,18 @@ const Banner = () => {
   return (
     <div className="banner-container">
       <div className="box">
-        <p className="introduction">Hi, my name is</p>
-        <h1 className="name">Tyler Nguyen</h1>
-        <h1 className="sub-title">Web/Mobile Developer</h1>
-        <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <div className="introduction">Hi, my name is</div>
+        <div className="name">Tyler Nguyen,</div>
+        <div className="sub-title">Web/Mobile Developer</div>
+        <div className="description">
+          I enjoy developing full stack applications and specialize in
+          React/React Native. Currently, I'm focused on building accessible
+          products at{" "}
+          <a href="https://investorcashmanagement.com/" target="_blank">
+            <strong>Investor Cash Management</strong>
+          </a>
+          .
+        </div>
       </div>
     </div>
   );

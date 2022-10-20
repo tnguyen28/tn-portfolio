@@ -1,0 +1,24 @@
+.contact {
+    display: flex;
+
+    .form {
+        flex: 1;
+    }
+
+    .info {
+        flex: 1;
+
+        .personal {
+            .personal-item {
+                display: flex;
+
+                .icon {
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        .links {}
+
+    }
+}

@@ -3,5 +3,10 @@ export interface ExperienceData {
   companyName: string;
   dateRange: string;
   description: string[];
+  tech: TechItem[];
   location: string;
+}
+
+export interface TechItem {
+  name: string;
 }

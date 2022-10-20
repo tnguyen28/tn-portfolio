@@ -4,24 +4,28 @@ import "./about.scss";
 const About = () => {
   return (
     <div className="about-container">
-      <h2 className="title">About Me</h2>
+      <div className="title">
+        <h2>About Me</h2>
+      </div>
       <div className="box">
         <div className="text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Hello! My name is Tyler and I enjoy developing code. My interest in
+            programming first began back in 2012 when I decided to take an
+            Introduction Computer Science course as a Freshman in high school.
+            From there, I started to look at the world in a more logical way and
+            knew I could not turn back.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Fast-forward to 2020 and I've attended{" "}
+            <a>Loyola University Chicago</a> to earn a Bachelor of Science
+            degree. There I studied Software Engineering and Computer Forensics.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Up until today, I've had the honor and privilege of working at{" "}
+            <a>a global engineering company</a>,{" "}
+            <a>a FinTech investing start-up</a>, and graduating from{" "}
+            <a>a full-stack coding bootcamp</a>.
           </p>
         </div>
         <div className="image">image</div>
