@@ -6,8 +6,9 @@ const Contact = () => {
   const [showForm, setShowForm] = useState(false);
   return (
     <div className="contact">
-      <h2>Let's Connect</h2>
-      <button onClick={() => setShowForm(!showForm)}>Say Hello</button>
+      <button onClick={() => setShowForm(!showForm)}>
+        <h2>Let's Connect</h2>
+      </button>
       {showForm && <ContactForm />}
     </div>
   );

@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="description">
           I enjoy developing full stack applications and specialize in
           React/React Native. Currently, I'm focused on building accessible
-          products at{" "}
+          FinTech products at{" "}
           <a href="https://investorcashmanagement.com/" target="_blank">
             <strong>Investor Cash Management</strong>
           </a>

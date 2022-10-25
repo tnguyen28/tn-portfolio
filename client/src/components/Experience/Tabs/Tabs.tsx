@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./tabs.scss";
+
 import { experienceData } from "./constants";
 import { ExperienceData, TechItem } from "./types";
+
+import Star from "../../../assets/icons/html5/icons8-html-5-96.svg";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(
@@ -29,7 +32,7 @@ const Tabs = () => {
   };
 
   const renderTabContent = (data: ExperienceData[]) => {
-    return data.map((company: ExperienceData) => {
+    return data.reverse().map((company: ExperienceData) => {
       const { companyName, title, dateRange, description, tech } = company;
       const id: string = `${companyName}_${title}`;
       return activeTab === id ? (
@@ -53,8 +56,10 @@ const Tabs = () => {
             <ul>
               {tech.map((item: TechItem) => (
                 <li key={item.name}>
-                  <div className='tech-item'>
-                    <div className='tech-img'></div>
+                  <div className="tech-item">
+                    <div className="tech-img">
+
+                    </div>
                     <p>{item.name}</p>
                   </div>
                 </li>

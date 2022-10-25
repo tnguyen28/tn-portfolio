@@ -9,4 +9,5 @@ export interface ExperienceData {
 
 export interface TechItem {
   name: string;
+  icon?: any;
 }

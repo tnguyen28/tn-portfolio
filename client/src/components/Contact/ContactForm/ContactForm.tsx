@@ -22,7 +22,7 @@ const ContactField = ({
       <Field name={name} validate={validate}>
         {({ input, meta }) => (
           <div className="contact-field">
-            <input {...input} type={type} placeholder={placeholder}  style={{width:'90%'}}/>
+            <input {...input} type={type} placeholder={placeholder} />
             {meta.error && meta.touched && <span>{meta.error}</span>}
           </div>
         )}
@@ -64,7 +64,7 @@ const ContactForm = () => {
                 <Field name="message">
                   {({ input, meta, textarea }) => (
                     <div className="contact-field">
-                      <textarea {...input} rows={10} placeholder="MESSAGE" style={{width:"90%"}}/>
+                      <textarea {...input} rows={10} placeholder="MESSAGE"/>
                       {meta.error && meta.touched && <span>{meta.error}</span>}
                     </div>
                   )}
