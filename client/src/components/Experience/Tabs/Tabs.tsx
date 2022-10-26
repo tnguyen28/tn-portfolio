@@ -4,7 +4,7 @@ import "./tabs.scss";
 import { experienceData } from "./constants";
 import { ExperienceData, TechItem } from "./types";
 
-import Star from "../../../assets/icons/html5/icons8-html-5-96.svg";
+import Icon, { Icons } from "../../../util/iconPicker";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(
@@ -35,6 +35,7 @@ const Tabs = () => {
     return data.reverse().map((company: ExperienceData) => {
       const { companyName, title, dateRange, description, tech } = company;
       const id: string = `${companyName}_${title}`;
+
       return activeTab === id ? (
         <div id={id} key={id}>
           <div className="tab-item-title">
@@ -58,7 +59,7 @@ const Tabs = () => {
                 <li key={item.name}>
                   <div className="tech-item">
                     <div className="tech-img">
-
+                      <Icon name={item.icon} />
                     </div>
                     <p>{item.name}</p>
                   </div>
