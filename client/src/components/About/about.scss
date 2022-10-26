@@ -14,11 +14,10 @@
         .text {
             padding-right: 50px;
             flex: 1;
+            line-height: 1.4;
 
             .title {
                 font-size: 42px;
-                margin: 0;
-                padding: 0;
             }
 
             a {
@@ -39,7 +38,7 @@
 
             img {
                 border-radius: 10px;
-                width: 350px;
+                width: 400px;
                 height: auto;
 
             }
