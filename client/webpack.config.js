@@ -10,6 +10,10 @@ const stylesHandler = "style-loader";
 
 const config = {
   entry: "./src/index.tsx",
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
+  },
   devServer: {
     open: true,
     host: "localhost",
