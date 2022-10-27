@@ -32,7 +32,7 @@ const Tabs = () => {
   };
 
   const renderTabContent = (data: ExperienceData[]) => {
-    return data.reverse().map((company: ExperienceData) => {
+    return data.map((company: ExperienceData) => {
       const { companyName, title, dateRange, description, tech } = company;
       const id: string = `${companyName}_${title}`;
 
