@@ -1,0 +1,12 @@
+.experience-container {
+    background-color: #1d3557;
+    color: #f1faee;
+    display: flex;
+    padding: 4% 10%;
+    flex-direction: column;
+
+    .title {
+        font-size: 50px;
+        text-align: end;
+    }
+}

@@ -1,0 +1,67 @@
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding-top: 5%;
+
+    .form {
+        flex: 1;
+        padding: 20px 0 20px 0;
+        min-width: 400px;
+
+        .contact-field {
+            padding: 5px 0 5px 0;
+
+            input {
+                width: 90%;
+                height: 40px;
+            }
+
+            textarea {
+                width: 90%;
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #A8DADC;
+            cursor: pointer;
+        }
+    }
+
+    .info {
+        flex: 1;
+
+        .personal {
+            border-bottom: 1px solid white;
+            padding: 6%;
+
+            .personal-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1%;
+
+                .icon {
+                    width: 100px;
+                }
+
+                span {
+                    width: 150px;
+                    text-align: left;
+                }
+            }
+        }
+
+        .links {
+            border-bottom: 1px solid white;
+            padding: 6%;
+        }
+
+    }
+}
