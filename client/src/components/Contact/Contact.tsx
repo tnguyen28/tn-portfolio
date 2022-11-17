@@ -4,12 +4,16 @@ import ContactForm from "./ContactForm/ContactForm";
 
 import Github from "../../assets/icons/social-media/github.svg";
 import Linkedin from "../../assets/icons/social-media/linkedin.svg";
-import Location from "../../assets/icons/social-media/location.svg";
-import Phone from "../../assets/icons/social-media/phone.svg";
-import Email from "../../assets/icons/social-media/email.svg";
+// import Location from "../../assets/icons/social-media/location.svg";
+// import Phone from "../../assets/icons/social-media/phone.svg";
+// import Email from "../../assets/icons/social-media/email.svg";
+
+import Avatar from "../../assets/icons/avatar.svg";
+
+import { SocialIcon } from "react-social-icons";
 
 const Contact = () => {
-  const [showPanel, setShowPanel] = useState(true);
+  const [showPanel, setShowPanel] = useState(false);
 
   const downloadResume = () => {
     fetch("resume.pdf").then((response: any) => {
@@ -20,7 +24,6 @@ const Contact = () => {
         alink.href = fileUrl;
         alink.download = "tylernguyen-resume.pdf";
         alink.click();
-
       });
     });
   };
@@ -29,7 +32,9 @@ const Contact = () => {
     <div>
       {!showPanel ? (
         <div className="button" onClick={() => setShowPanel(true)}>
-          <div className="icon"></div>
+          <div className="icon">
+            <Avatar />
+          </div>
           <div className="text">let's connect!</div>
         </div>
       ) : (
@@ -42,16 +47,24 @@ const Contact = () => {
               <h2>Let's Connect.</h2>
               <div>
                 <div className="link">
-                  <Location />
+                  <SocialIcon bgColor="white" fgColor="black" />
                   <div>Chicago, Illinois</div>
                 </div>
                 <div className="link">
-                  <Phone />
+                  <SocialIcon
+                    network="whatsapp"
+                    bgColor="white"
+                    fgColor="black"
+                  />
                   <div>(630) 414-9085</div>
                 </div>
                 <a href="mailto:tntt_tyler@me.com" target="_blank">
                   <div className="link">
-                    <Email />
+                    <SocialIcon
+                      network="email"
+                      bgColor="white"
+                      fgColor="black"
+                    />
                     <div>tntt_tyler@me.com</div>
                   </div>
                 </a>
