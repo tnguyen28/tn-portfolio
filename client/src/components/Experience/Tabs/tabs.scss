@@ -46,6 +46,10 @@
             justify-content: space-between;
             font-size: 20px;
             font-weight: bolder;
+
+            *:nth-child(2) {
+                text-align: end;
+            }
         }
 
         .tab-item-date {
