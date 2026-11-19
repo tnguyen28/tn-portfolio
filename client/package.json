@@ -5,6 +5,7 @@
   "description": "Tyler Nguyen's personal portfolio site",
   "scripts": {
     "start": "webpack serve",
+    "start:lan": "webpack serve --host 0.0.0.0 --allowed-hosts all --no-open",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "watch": "webpack --watch",

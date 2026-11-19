@@ -5,6 +5,7 @@
   "scripts": {
     "install": "npm install --prefix client",
     "start": "npm start --prefix client",
+    "start:lan": "npm run start:lan --prefix client",
     "build": "npm run build --prefix client"
   }
 }
