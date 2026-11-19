@@ -59,7 +59,7 @@ const Contact = () => {
         <span className="icon" aria-hidden="true">
           <Avatar />
         </span>
-        <span className="text">let's connect!</span>
+        <span className="text">Let's connect!</span>
       </button>
 
       <dialog
@@ -80,7 +80,7 @@ const Contact = () => {
             ×
           </button>
           <div className="content">
-            <h2 id="contact-title">Let's Connect.</h2>
+            <h2 id="contact-title">Let's connect.</h2>
             <ul className="links">
               {links.map(({ icon: LinkIcon, label, href, external }) => {
                 const row = (
@@ -116,7 +116,7 @@ const Contact = () => {
               href={resume}
               download="tylernguyen-resume.pdf"
             >
-              download my resume
+              Download my resume
             </a>
           </div>
         </div>

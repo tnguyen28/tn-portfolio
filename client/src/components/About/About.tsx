@@ -12,34 +12,55 @@ const About = () => {
             About Me
           </h2>
           <p>
-            Hello! My name is Tyler and I enjoy developing code. My interest in
-            programming first began back in 2012 when I decided to take an
-            Introduction Computer Science course as a Freshman in high school.
-            From there, I started to look at the world in a more logical way and
-            knew I could not turn back.
+            I've been hooked on programming since 2012, when I took an
+            Introduction to Computer Science course as a high school freshman.
+            It changed how I approach problems, and I never looked back.
           </p>
           <p>
-            Fast-forward to 2020 and I've attended{" "}
-            <a className="text-link" href="https://www.luc.edu/" target="_blank" rel="noopener noreferrer">
+            In 2020 I earned a Bachelor of Science from{" "}
+            <a
+              className="text-link"
+              href="https://www.luc.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Loyola University Chicago
-            </a>{" "}
-            to earn a Bachelor of Science degree. There I studied Software
-            Engineering and Computer Forensics.
+            </a>
+            , where I studied Software Engineering and Computer Forensics.
           </p>
           <p>
-            Up until today, I've had the honor and privilege of working at{" "}
-            <a className="text-link" href="https://www.bosch.com/" target="_blank" rel="noopener noreferrer">
+            Along the way I've built software at{" "}
+            <a
+              className="text-link"
+              href="https://www.bosch.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               a global engineering company
-            </a>
-            ,{" "}
-            <a className="text-link" href="https://investorcashmanagement.com/" target="_blank" rel="noopener noreferrer">
+            </a>{" "}
+            and{" "}
+            <a
+              className="text-link"
+              href="https://investorcashmanagement.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               a FinTech investing start-up
             </a>
-            , and graduating from{" "}
-            <a className="text-link" href="https://www.codingdojo.com/" target="_blank" rel="noopener noreferrer">
+            , and completed{" "}
+            <a
+              className="text-link"
+              href="https://www.codingdojo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               a full-stack coding bootcamp
             </a>
             .
+          </p>
+          <p>
+            I like owning my work end to end: building the feature, testing
+            it, and seeing it through to release.
           </p>
         </div>
         <div className="image">

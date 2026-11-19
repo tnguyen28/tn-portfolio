@@ -7,11 +7,11 @@ const Banner = () => {
       <div className="box">
         <p className="introduction">Hi, my name is</p>
         <h1 className="name">Tyler Nguyen,</h1>
-        <p className="sub-title">Web/Mobile Developer</p>
+        <p className="sub-title">Web & Mobile Developer</p>
         <p className="description">
-          I enjoy developing full stack applications and specialize in
-          React/React Native. Currently, I'm focused on building accessible
-          FinTech products at{" "}
+          I build full-stack web and mobile apps, specializing in React and
+          React Native. Right now I'm building accessible FinTech products
+          at{" "}
           <a
             className="text-link"
             href="https://investorcashmanagement.com/"

@@ -3,16 +3,17 @@ import { ExperienceData } from "./types";
 
 export const experienceData: ExperienceData[] = [
   {
-    title: "Front End Developer",
+    title: "Front-End Developer",
     companyName: "Investor Cash Management",
-    dateRange: "Spring 2021 - Present",
+    dateRange: "Spring 2021 – Present",
     description: [
-      "Built, deployed, and distributed multiple web and mobile applications across various clients using React/React Native. Leveraged Appcenter and Jenkins pipeline to maintain releases.",
-      "Improved upon existing features as well as continuously implemented new features, primarily within the scope of financial technology. Utilized Jira Software and Bitbucket to uphold an agile culture.",
+      "Built and shipped multiple web and mobile apps for several clients with React and React Native.",
+      "Maintained releases through App Center and Jenkins pipelines, taking builds from development to distribution.",
+      "Delivered new features and improved existing ones across FinTech products, working in an agile team with Jira and Bitbucket.",
     ],
     tech: [
       { name: "React", icon: Icons.REACT },
-      { name: "Redux - Saga/Rematch", icon: Icons.REDUX },
+      { name: "Redux (Saga, Rematch)", icon: Icons.REDUX },
       { name: "React Native", icon: Icons.REACT },
       { name: "Bootstrap", icon: Icons.BOOTSTRAP },
       { name: "MySQL Workbench", icon: Icons.MYSQL },
@@ -28,15 +29,15 @@ export const experienceData: ExperienceData[] = [
   {
     title: "Web Application Developer Intern",
     companyName: "Robert Bosch, LLC",
-    dateRange: "Summer 2019 - May 2020",
+    dateRange: "Summer 2019 – May 2020",
     description: [
-      "Utilized React JS library and React Native open-source mobile application framework to program and develop internal web applications that support operational efficiency across global branches.",
-      "Facilitated in-depth research to advance progress of new virtual reality (VR) mobile applications for internal use, conducting trial and error testing and quickly isolating technical limitations.",
+      "Developed internal web applications with React and React Native that support operational efficiency across Bosch's global branches.",
+      "Researched and prototyped new virtual reality (VR) mobile apps for internal use, testing approaches to pinpoint technical limitations early.",
     ],
     tech: [
       { name: "React", icon: Icons.REACT },
       { name: "React Native", icon: Icons.REACT },
-      { name: "MaterialUI", icon: Icons.MUI },
+      { name: "Material UI", icon: Icons.MUI },
       { name: "HTML", icon: Icons.HTML },
       { name: "CSS", icon: Icons.CSS },
       { name: "JavaScript", icon: Icons.JS },
@@ -49,13 +50,13 @@ export const experienceData: ExperienceData[] = [
     companyName: "Robert Bosch, LLC",
     dateRange: "Summer 2018",
     description: [
-      "Updated existing application to optimize end user accessibility, converting QR code scanner via Swift and installing new data features that import contact information and produce personalized QR codes.",
-      "Developed new code for existing applications to streamline operational functions while decreasing deployment time, successfully increasing application downloads by 1K+ after launch. ",
+      "Improved an existing app's accessibility, converting its QR code scanner to Swift and adding features to import contact information and generate personalized QR codes.",
+      "Streamlined existing apps and reduced deployment time, increasing downloads by 1,000+ after launch.",
     ],
     tech: [
       { name: "React Native", icon: Icons.REACT },
-      { name: "XCode (iOS)", icon: Icons.XCODE },
-      { name: "ObjC", icon: Icons.OBJC },
+      { name: "Xcode", icon: Icons.XCODE },
+      { name: "Objective-C", icon: Icons.OBJC },
       { name: "Swift", icon: Icons.SWIFT },
     ],
     location: "Mount Prospect, Illinois",
