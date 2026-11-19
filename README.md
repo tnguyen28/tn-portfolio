@@ -18,6 +18,20 @@ npm run build    # production build into client/dist
 phone on the same Wi-Fi as your computer, open `http://<your-computer-ip>:8080`
 (the IP is printed as "On Your Network" when the server starts).
 
+### Deploying
+
+Set `SITE_URL` to the site's public address when building, so link previews
+(iMessage, LinkedIn, Slack) get an absolute image URL and a canonical link:
+
+```sh
+SITE_URL=https://your-domain.com npm run build
+```
+
+Without it the site works the same; only the preview image may not show when
+the link is shared.
+
+The favicon, home-screen icons and preview image live in `client/public/`.
+
 ## Layout
 
 ```

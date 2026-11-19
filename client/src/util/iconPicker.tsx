@@ -55,7 +55,7 @@ const icons: any = {
 
 const Icon = ({ name }: IconProps) => {
   const IconName = icons[name];
-  return <IconName />;
+  return <IconName aria-hidden="true" focusable="false" />;
 };
 
 export default Icon;

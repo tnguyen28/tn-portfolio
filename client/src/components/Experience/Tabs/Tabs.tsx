@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./tabs.scss";
 
 import { experienceData } from "./constants";
@@ -19,24 +19,47 @@ const shortDate = (dateRange: string) => {
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(idFor(experienceData[0]));
 
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
   const active = experienceData.find((job) => idFor(job) === activeTab);
+
+  // Arrow keys / Home / End move between tabs (WAI-ARIA tabs pattern).
+  const onKeyDown = (e: React.KeyboardEvent, index: number) => {
+    const last = experienceData.length - 1;
+    const next: Record<string, number> = {
+      ArrowRight: index === last ? 0 : index + 1,
+      ArrowDown: index === last ? 0 : index + 1,
+      ArrowLeft: index === 0 ? last : index - 1,
+      ArrowUp: index === 0 ? last : index - 1,
+      Home: 0,
+      End: last,
+    };
+    if (!(e.key in next)) return;
+    e.preventDefault();
+    const target = next[e.key];
+    setActiveTab(idFor(experienceData[target]));
+    tabRefs.current[target]?.focus();
+  };
 
   return (
     <div className="tabs-container">
       <div className="menu" role="tablist" aria-label="Experience">
-        {experienceData.map((job) => {
+        {experienceData.map((job, index) => {
           const id = idFor(job);
           const selected = id === activeTab;
           return (
             <button
               key={id}
+              ref={(el) => (tabRefs.current[index] = el)}
               type="button"
               role="tab"
               id={`tab-${id}`}
               aria-selected={selected}
+              tabIndex={selected ? 0 : -1}
               aria-controls="experience-panel"
               className={selected ? "tab active" : "tab"}
               onClick={() => setActiveTab(id)}
+              onKeyDown={(e) => onKeyDown(e, index)}
             >
               <span className="tab-company">{job.companyName}</span>
               <span className="tab-date">{shortDate(job.dateRange)}</span>
@@ -50,6 +73,7 @@ const Tabs = () => {
           className="tab-content"
           id="experience-panel"
           role="tabpanel"
+          tabIndex={0}
           aria-labelledby={`tab-${activeTab}`}
         >
           <div className="tab-item-title">

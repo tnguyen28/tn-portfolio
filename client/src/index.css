@@ -10,6 +10,8 @@
   --navy-line: #2c4a75;
   --cream: #f1faee;
   --accent: #a8dadc;
+  /* Secondary text on navy; 7:1 contrast. */
+  --muted: #bccad8;
   /* Side padding: 20px on small phones, growing to 10% on wide screens. */
   --gutter: clamp(20px, 8vw, 10%);
   --section-gap: clamp(56px, 10vw, 120px);
@@ -46,6 +48,21 @@ a {
   color: inherit;
 }
 
+/* Links inside running text: underlined so they read as links without
+   relying on color or hover (phones have no hover). */
+.text-link {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.text-link:hover {
+  color: var(--accent);
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -56,4 +73,35 @@ a {
   font-size: clamp(2rem, 8vw, 3.25rem);
   font-weight: 600;
   line-height: 1.15;
+}
+
+/* Hidden until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  padding: 10px 16px;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--accent);
+  border-radius: 6px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

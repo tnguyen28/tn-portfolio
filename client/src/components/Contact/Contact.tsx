@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import "./contact.scss";
 
 import Github from "../../assets/icons/social-media/github.svg";
@@ -35,85 +35,92 @@ const links: ContactLink[] = [
 ];
 
 const Contact = () => {
-  const [showPanel, setShowPanel] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  useEffect(() => {
-    if (!showPanel) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setShowPanel(false);
-    document.addEventListener("keydown", onKey);
-    // Keep the page behind the panel from scrolling on phones.
+  // A native modal <dialog> traps focus, hides the page from screen
+  // readers, closes on Escape and returns focus to the trigger.
+  const open = () => {
+    dialogRef.current?.showModal();
     document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [showPanel]);
+  };
+  const close = () => dialogRef.current?.close();
+  const onClose = () => {
+    document.body.style.overflow = "";
+  };
 
-  if (!showPanel) {
-    return (
+  return (
+    <>
       <button
         type="button"
         className="contact-trigger"
-        onClick={() => setShowPanel(true)}
+        aria-haspopup="dialog"
+        onClick={open}
       >
         <span className="icon" aria-hidden="true">
           <Avatar />
         </span>
         <span className="text">let's connect!</span>
       </button>
-    );
-  }
 
-  return (
-    <>
-      <div className="contact-backdrop" onClick={() => setShowPanel(false)} />
-      <aside className="panel" role="dialog" aria-modal="true" aria-label="Contact">
-        <button
-          type="button"
-          className="close"
-          aria-label="Close"
-          onClick={() => setShowPanel(false)}
-          autoFocus
-        >
-          ×
-        </button>
-        <div className="content">
-          <h2>Let's Connect.</h2>
-          <ul className="links">
-            {links.map(({ icon: LinkIcon, label, href, external }) => {
-              const row = (
-                <>
-                  <span className="link-icon" aria-hidden="true">
-                    <LinkIcon />
-                  </span>
-                  <span className="link-label">{label}</span>
-                </>
-              );
-              return (
-                <li key={label}>
-                  {href ? (
-                    <a
-                      className="link"
-                      href={href}
-                      {...(external && {
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                      })}
-                    >
-                      {row}
-                    </a>
-                  ) : (
-                    <div className="link">{row}</div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-          <a className="resume" href={resume} download="tylernguyen-resume.pdf">
-            download my resume
-          </a>
+      <dialog
+        ref={dialogRef}
+        className="panel"
+        aria-labelledby="contact-title"
+        onClose={onClose}
+        // Clicks on the dialog element itself land on the backdrop.
+        onClick={(e) => e.target === e.currentTarget && close()}
+      >
+        <div className="panel-body">
+          <button
+            type="button"
+            className="close"
+            aria-label="Close"
+            onClick={close}
+          >
+            ×
+          </button>
+          <div className="content">
+            <h2 id="contact-title">Let's Connect.</h2>
+            <ul className="links">
+              {links.map(({ icon: LinkIcon, label, href, external }) => {
+                const row = (
+                  <>
+                    <span className="link-icon" aria-hidden="true">
+                      <LinkIcon focusable="false" />
+                    </span>
+                    <span className="link-label">{label}</span>
+                  </>
+                );
+                return (
+                  <li key={label}>
+                    {href ? (
+                      <a
+                        className="link"
+                        href={href}
+                        {...(external && {
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                        })}
+                      >
+                        {row}
+                      </a>
+                    ) : (
+                      <div className="link">{row}</div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            <a
+              className="resume"
+              href={resume}
+              download="tylernguyen-resume.pdf"
+            >
+              download my resume
+            </a>
+          </div>
         </div>
-      </aside>
+      </dialog>
     </>
   );
 };

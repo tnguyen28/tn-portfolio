@@ -3,22 +3,27 @@ import "./banner.scss";
 
 const Banner = () => {
   return (
-    <div className="banner-container">
+    <header className="banner-container">
       <div className="box">
-        <div className="introduction">Hi, my name is</div>
-        <div className="name">Tyler Nguyen,</div>
-        <div className="sub-title">Web/Mobile Developer</div>
-        <div className="description">
+        <p className="introduction">Hi, my name is</p>
+        <h1 className="name">Tyler Nguyen,</h1>
+        <p className="sub-title">Web/Mobile Developer</p>
+        <p className="description">
           I enjoy developing full stack applications and specialize in
           React/React Native. Currently, I'm focused on building accessible
           FinTech products at{" "}
-          <a href="https://investorcashmanagement.com/" target="_blank" rel="noopener noreferrer">
-            <strong>Investor Cash Management</strong>
+          <a
+            className="text-link"
+            href="https://investorcashmanagement.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Investor Cash Management
           </a>
           .
-        </div>
+        </p>
       </div>
-    </div>
+    </header>
   );
 };
 

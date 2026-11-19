@@ -36,13 +36,4 @@
         max-width: 32rem;
         font-size: clamp(1rem, 2.5vw, 1.125rem);
     }
-
-    a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-            color: var(--accent);
-        }
-    }
 }

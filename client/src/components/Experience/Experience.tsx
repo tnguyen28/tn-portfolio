@@ -4,9 +4,11 @@ import Tabs from "./Tabs/Tabs";
 
 const Experience = () => {
   return (
-    <section className="experience-container">
+    <section className="experience-container" aria-labelledby="experience-title">
       <div className="inner">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title" id="experience-title">
+          Experience
+        </h2>
         <Tabs />
       </div>
     </section>
