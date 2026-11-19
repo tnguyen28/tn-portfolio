@@ -1,18 +1,59 @@
-html,
-body {
-  font-family: 'Rubik';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: #1d3557;
+@font-face {
+  font-family: "Rubik";
+  src: url("./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: 'Rubik';
-  src: url('./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf');
+:root {
+  --navy: #1d3557;
+  --navy-line: #2c4a75;
+  --cream: #f1faee;
+  --accent: #a8dadc;
+  /* Side padding: 20px on small phones, growing to 10% on wide screens. */
+  --gutter: clamp(20px, 8vw, 10%);
+  --section-gap: clamp(56px, 10vw, 120px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cream);
+  background-color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.section-title {
+  margin: 0 0 clamp(20px, 4vw, 32px);
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.15;
 }

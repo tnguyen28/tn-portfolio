@@ -8,9 +8,7 @@ const About = () => {
     <div className="about-container">
       <div className="box">
         <div className="text">
-          <div className="title">
-            <h2>About Me</h2>
-          </div>
+          <h2 className="section-title">About Me</h2>
           <p>
             Hello! My name is Tyler and I enjoy developing code. My interest in
             programming first began back in 2012 when I decided to take an
@@ -43,7 +41,7 @@ const About = () => {
           </p>
         </div>
         <div className="image">
-          <img src={profile} alt="profile" />
+          <img src={profile} alt="Tyler Nguyen" width={400} height={400} />
         </div>
       </div>
     </div>

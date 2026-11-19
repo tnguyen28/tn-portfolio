@@ -1,6 +1,15 @@
 .footer {
-    background-color: #1d3557;
-    color:white;
-    padding:15px;
+    padding: 24px var(--gutter);
+    // Leave room for the floating contact button on phones.
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+    font-size: 14px;
     text-align: center;
+    color: white;
+    background-color: var(--navy);
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+    .footer {
+        padding-bottom: 24px;
+    }
 }

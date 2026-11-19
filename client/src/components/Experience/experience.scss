@@ -1,12 +1,14 @@
 .experience-container {
-    background-color: #1d3557;
-    color: #f1faee;
-    display: flex;
-    padding: 4% 10%;
-    flex-direction: column;
+    padding: 0 var(--gutter) var(--section-gap);
 
-    .title {
-        font-size: 50px;
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .experience-container .section-title {
         text-align: end;
     }
 }

@@ -4,10 +4,12 @@ import Tabs from "./Tabs/Tabs";
 
 const Experience = () => {
   return (
-    <div className="experience-container">
-      <h2 className="title">Experience</h2>
-      <Tabs />
-    </div>
+    <section className="experience-container">
+      <div className="inner">
+        <h2 className="section-title">Experience</h2>
+        <Tabs />
+      </div>
+    </section>
   );
 };
 

@@ -1,78 +1,48 @@
 .banner-container {
-    background-color: #1d3557;
-    color: #f1faee;
-    height: 100vh;
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    padding: 0 10%;
+    min-height: 100vh;
+    // svh = height with the phone's browser bars showing, so the hero
+    // doesn't jump or hide content behind the address bar.
+    min-height: 100svh;
+    padding: 72px var(--gutter);
 
     .box {
+        max-width: 44rem;
 
-        * {
-            margin: 0;
-            margin-bottom: 15px;
-        }
-
-        .introduction {}
-
-        .name {
-            font-size: 72px;
-            font-weight: 600;
-        }
-
-        .sub-title {
-            font-size: 68px;
-            font-weight: 500;
-            color: #a8dadc;
-        }
-
-        .description {
-            width: 500px;
-            line-height: 1.5;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-
-            &:hover {
-                color: #A8DADC;
-            }
+        > * {
+            margin: 0 0 16px;
         }
     }
-}
 
-@media (max-width: 900px) {
-    .banner-container {
-        .box {
-            .name {
-                font-size: 60px;
-            }
-
-            .sub-title {
-                font-size: 42px;
-            }
-        }
+    .introduction {
+        font-size: clamp(1rem, 3vw, 1.25rem);
     }
-}
 
-@media (max-width: 500px) {
-    .banner-container {
-        .box {
-            .name {
-                font-size: 48px;
-            }
+    .name {
+        font-size: clamp(2.5rem, 11vw, 4.5rem);
+        font-weight: 600;
+        line-height: 1.1;
+    }
 
-            .sub-title {
-                font-size: 30px;
-            }
+    .sub-title {
+        font-size: clamp(1.625rem, 7.5vw, 4.25rem);
+        font-weight: 500;
+        line-height: 1.15;
+        color: var(--accent);
+    }
 
-            .description {
-                width: 90%;
-                font-size: 12px;
-            }
+    .description {
+        max-width: 32rem;
+        font-size: clamp(1rem, 2.5vw, 1.125rem);
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--accent);
         }
     }
 }

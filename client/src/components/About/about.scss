@@ -1,62 +1,60 @@
 .about-container {
-    background-color: #1d3557;
-    color: #f1faee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10% 10% 10%;
+    padding: 0 var(--gutter) var(--section-gap);
 
     .box {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .text {
-            padding-right: 10%;
-            flex: 1;
-            line-height: 1.4;
+    .text {
+        min-width: 0;
 
-            .title {
-                font-size: 36px;
-            }
-
-            a {
-                color: white;
-                text-decoration: none;
-                font-weight: 900;
-            }
-
-            a:hover {
-                color: #A8DADC;
-            }
+        p {
+            margin: 0 0 1em;
         }
 
-        .image {
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
 
-            img {
-                border-radius: 10px;
-                width: 400px;
-                height: auto;
-
+            &:hover {
+                color: var(--accent);
             }
+        }
+    }
+
+    .image {
+        align-self: center;
+        width: 100%;
+        max-width: 400px;
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
         }
     }
 }
 
-
-@media (max-width: 900px) {
+@media (min-width: 900px) {
     .about-container {
         .box {
-            flex-direction: column;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 8%;
+        }
 
-            .image {
-                padding-top: 8%;
+        .text {
+            flex: 1;
+        }
 
-                img {
-                    margin: auto;
-                    display: block;
-                }
-            }
+        .image {
+            flex: 0 0 auto;
+            width: 36%;
         }
     }
 }
