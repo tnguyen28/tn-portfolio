@@ -4,7 +4,7 @@ import "./tabs.scss";
 import { experienceData } from "./constants";
 import { ExperienceData, TechItem } from "./types";
 
-import Icon, { Icons } from "../../../util/iconPicker";
+import Icon from "../../../util/iconPicker";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(

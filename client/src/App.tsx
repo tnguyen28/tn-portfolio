@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import "./App.scss";
+import React from "react";
 import { About, Banner, Contact, Experience, Footer } from "./components/index";
 
 const App = () => {

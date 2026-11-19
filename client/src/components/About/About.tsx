@@ -20,7 +20,7 @@ const About = () => {
           </p>
           <p>
             Fast-forward to 2020 and I've attended{" "}
-            <a href="https://www.luc.edu/" target="_blank">
+            <a href="https://www.luc.edu/" target="_blank" rel="noopener noreferrer">
               Loyola University Chicago
             </a>{" "}
             to earn a Bachelor of Science degree. There I studied Software
@@ -28,15 +28,15 @@ const About = () => {
           </p>
           <p>
             Up until today, I've had the honor and privilege of working at{" "}
-            <a href="https://www.bosch.com/" target="_blank">
+            <a href="https://www.bosch.com/" target="_blank" rel="noopener noreferrer">
               a global engineering company
             </a>
             ,{" "}
-            <a href="https://investorcashmanagement.com/" target="_blank">
+            <a href="https://investorcashmanagement.com/" target="_blank" rel="noopener noreferrer">
               a FinTech investing start-up
             </a>
             , and graduating from{" "}
-            <a href="https://www.codingdojo.com/" target="_blank">
+            <a href="https://www.codingdojo.com/" target="_blank" rel="noopener noreferrer">
               a full-stack coding bootcamp
             </a>
             .

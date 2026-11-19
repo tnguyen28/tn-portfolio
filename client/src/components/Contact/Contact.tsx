@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./contact.scss";
-import ContactForm from "./ContactForm/ContactForm";
 
 import Github from "../../assets/icons/social-media/github.svg";
 import Linkedin from "../../assets/icons/social-media/linkedin.svg";
-// import Location from "../../assets/icons/social-media/location.svg";
-// import Phone from "../../assets/icons/social-media/phone.svg";
-// import Email from "../../assets/icons/social-media/email.svg";
+import resume from "../../assets/documents/resume.pdf";
 
 import Avatar from "../../assets/icons/avatar.svg";
 
@@ -14,19 +11,6 @@ import { SocialIcon } from "react-social-icons";
 
 const Contact = () => {
   const [showPanel, setShowPanel] = useState(false);
-
-  const downloadResume = () => {
-    fetch("resume.pdf").then((response: any) => {
-      response.blob().then((blob: any) => {
-        const fileUrl = window.URL.createObjectURL(blob);
-
-        let alink = document.createElement("a");
-        alink.href = fileUrl;
-        alink.download = "tylernguyen-resume.pdf";
-        alink.click();
-      });
-    });
-  };
 
   return (
     <div>
@@ -58,7 +42,7 @@ const Contact = () => {
                   />
                   <div>(630) 414-9085</div>
                 </div>
-                <a href="mailto:tntt_tyler@me.com" target="_blank">
+                <a href="mailto:tntt_tyler@me.com" target="_blank" rel="noopener noreferrer">
                   <div className="link">
                     <SocialIcon
                       network="email"
@@ -68,7 +52,7 @@ const Contact = () => {
                     <div>tntt_tyler@me.com</div>
                   </div>
                 </a>
-                <a href="https://github.com/tnguyen28" target="_blank">
+                <a href="https://github.com/tnguyen28" target="_blank" rel="noopener noreferrer">
                   <div className="link">
                     <Github />
                     <div>/tnguyen28</div>
@@ -76,7 +60,7 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tylernguyen341/"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <div className="link">
                     <Linkedin />
@@ -85,7 +69,9 @@ const Contact = () => {
                 </a>
               </div>
               <div className="resume">
-                <div onClick={downloadResume}>download my resume</div>
+                <a href={resume} download="tylernguyen-resume.pdf">
+                  download my resume
+                </a>
               </div>
             </div>
           </div>

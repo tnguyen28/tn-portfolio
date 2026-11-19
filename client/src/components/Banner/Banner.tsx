@@ -12,7 +12,7 @@ const Banner = () => {
           I enjoy developing full stack applications and specialize in
           React/React Native. Currently, I'm focused on building accessible
           FinTech products at{" "}
-          <a href="https://investorcashmanagement.com/" target="_blank">
+          <a href="https://investorcashmanagement.com/" target="_blank" rel="noopener noreferrer">
             <strong>Investor Cash Management</strong>
           </a>
           .

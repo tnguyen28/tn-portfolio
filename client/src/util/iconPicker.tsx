@@ -1,4 +1,4 @@
-import React, { lazy, ReactComponentElement, Suspense } from "react";
+import React from "react";
 
 import Html from "../assets/icons/html5/html.svg";
 import Javascript from "../assets/icons/javascript/javascript.svg";
